@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+
+
+  <head>
+    <title> title </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="shortcut icon" href="#">
+  </head>
+  <body>
+  	<nav class="navbar navbar-toggleable-md navbar-inverse bg-primary bg-faded">
+	  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <a class="navbar-brand mr-auto" href="#">NODE BANK</a>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="/">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/login">Login</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/register">Register</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="/api">ApI</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+  	<div class="container-fluid">
+
+<body>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-3"></div>
+        <div class="col-md-6">
+		    <p class="lead">
+		    <ul class="list-group">
+			  <li class="list-group-item active">Account Details</li>
+			  <li class="list-group-item"><strong>Card Holder: </strong>{{userdata.name}}</li>
+			  <li class="list-group-item"><strong>Card No: </strong>{{userdata.card}}</li>
+			  <li class="list-group-item"><strong>Email: </strong>{{userdata.email}}</li>
+			  <li class="list-group-item"><strong>Available Balance: </strong>{{userdata.money}}</li>
+			</ul>
+		    <p class="lead">
+		    	<div class="btn-group btn-block btn-group-lg" role="group" aria-label="Actions">
+				  <a href="/member/withdraw" type="button" class="btn btn-secondary">Withdraw</a>
+				  <a href="/member/deposit"type="button" class="btn btn-secondary">Deposit</a>
+				  <a href="/member/logout"type="button" class="btn btn-secondary">Logout</a>
+				</div>
+			 </p>
+        </div>
+        <div class="col-md-3"></div>
+  	</div>
+  </div>
+</div>
+</body>
+</html>
+
+

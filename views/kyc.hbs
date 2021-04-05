@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../public/stylesheets/kyc.css">
+    <script src="/javascripts/kyc.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Uploading</title>
+</head>
+<body>
+    <h1>To Complete KYC upload image</h1>
+    <hr>
+    <div>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="name">Image Title</label>
+                <input type="text" id="kycName" placeholder="Name"
+                       value="" name="name" required>
+            </div>
+            <div>
+                <label for="desc">Image Description</label>
+                <textarea id="kycDesc" name="pesc" value="" rows="2"
+                          placeholder="Description" required>
+                </textarea>
+            </div>
+            <div>
+                <label for="image">Upload Image</label>
+                <input type="file" id="kycImage"
+                       name="image" value="" required>
+            </div>
+            <div>
+                <button type="submit" onclick="userKyc()">Submit</button>
+            </div>
+        </form>
+    </div>
+ <hr>
+</body>
+ 
+</html>
