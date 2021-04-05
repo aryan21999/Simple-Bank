@@ -23,7 +23,7 @@ router.get('/withdraw', function(req, res, next) {
   res.render('transact', { action: 'WITHDRAW', userdata: userdata, title: 'Withdraw' });
 });
 router.get('/deposit', function(req, res, next) {
-  res.render('member', { action: 'DEPOSIT', userdata: userdata, title: 'Deposit' });
+  res.render('transact', { action: 'DEPOSIT', userdata: userdata, title: 'Deposit' });
 });
 router.get('/logout', function(req, res, next) {
   res.clearCookie("logged");

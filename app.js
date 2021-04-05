@@ -15,21 +15,11 @@ var member = require('./routes/member');
 var api = require('./routes/api');
 var app = express();
 redirect(app);
-//Connect to Mongoosemongoose.Promise = global.Promise;
 
-//mongoose.connect('mongodb+srv://Aryan:09876Arya@cluster0.h0l2c.mongodb.net/bank?retryWrites=true&w=majority');
-mongoose.connect('mongodb+srv://Aryan:09876Arya@cluster0.h0l2c.mongodb.net/Bank?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://Aryan:09876Arya@cluster0.h0l2c.mongodb.net/accounts?retryWrites=true&w=majority');
  var db = mongoose.connection;
 
-// var promise = mongoose.connect('mongodb://Aryan:09876Arya@cluster0.h0l2c.mongodb.net/Bank?retryWrites=true&w=majority', {
-//   useMongoClient: true,
-// });
 
-// promise.then(function(db) {
-//     console.log("Connected to database!!!");
-// }, function(err){
-//     console.log("Error in connecting database " + err);
-// });
 
 
 // view engine setup
