@@ -26,13 +26,12 @@ var userSchema = mongoose.Schema({
 		required: true,
 		default: 0
 	},
-	image_url:{
-		type: String
-	},
 	create_date:{
 		type: Date,
 		default: Date.now
 	}
 });
+
+
 
 var User = module.exports = mongoose.model('User', userSchema);
