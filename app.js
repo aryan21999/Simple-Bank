@@ -6,13 +6,17 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var redirect = require('express-redirect');
-//mongoose.Promise = global.Promise;
+
+// const expressHbs = require('express-handlebars');
 
 var index = require('./routes/index');
 var auth = require('./routes/auth');
 var register = require('./routes/register');
 var member = require('./routes/member');
 var api = require('./routes/api');
+
+var initRoutes = require("./routes/kyc");
+
 var app = express();
 redirect(app);
 
@@ -31,20 +35,22 @@ app.set('view engine', 'hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
+initRoutes(app);
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.urlencoded({ extended: true }));
+
 
 app.use('/', index);
 app.use('/login',auth);
 app.use('/register',register);
 app.use('/member',member);
 app.use('/api',api);
+
+
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
 
 // error handler
 // app.use(function(err, req, res, next) {
@@ -57,13 +63,14 @@ app.use(function(req, res, next) {
 //   res.render('error');
 // });
 
+
+
 var port = process.env.PORT || '4000'
 app.listen(port, err => {
     if (err)
         throw err
     console.log('Server listening on port', port)
 })
-
 
 
 module.exports = app;
